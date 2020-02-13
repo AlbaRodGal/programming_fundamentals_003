@@ -42,7 +42,12 @@ const catalogue = [
 ];
 
 function countBooksByAuthor(author) {
-  
+  let counter = 0;
+  for (let i = 0; i < catalogue.length; i++) {
+    if (catalogue[i].author === author) {
+      counter++
+    }
+  } return counter
 }
 
 function checkBookByTitle(title) {
