@@ -26,3 +26,9 @@ describe("catalogueService", () => {
     });
   });
 });
+
+  describe("catalogueService.getQuantity", () => {
+    test("returns the quantity of this item", () => {
+      expect(catalogueService.getQuantity("A Place of Greater Safety")).toBe(11);
+    });
+  });
