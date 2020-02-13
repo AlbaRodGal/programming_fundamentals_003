@@ -53,18 +53,17 @@ function countBooksByAuthor(author) {
 function checkBookByTitle(title) {
   //check whether the title exists in catalogue
   for (let i = 0; i < catalogue.length; i++){
-    const bookTitle = catalogue[i];
-    if (bookTitle.title.includes(title)){
+    if (catalogue[i].title === title){
       return true
     }
-  }
+    }
+    return false
 }
 
 function countBooksByFirstLetter(letter) {
   let counter = 0;
   for (let i = 0; i < catalogue.length; i++){
-    const bookTitle = catalogue[i];
-    if (bookTitle.title.charAt(0) === letter){
+    if (catalogue[i].title.charAt(0).toLowerCase()=== letter.toLowerCase()){
       counter++
     }
   } return counter
