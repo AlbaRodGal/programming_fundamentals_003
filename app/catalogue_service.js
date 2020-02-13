@@ -61,7 +61,13 @@ function checkBookByTitle(title) {
 }
 
 function countBooksByFirstLetter(letter) {
-  // Your code here
+  let counter = 0;
+  for (let i = 0; i < catalogue.length; i++){
+    const bookTitle = catalogue[i];
+    if (bookTitle.title.charAt(0) === letter){
+      counter++
+    }
+  } return counter
 }
 
 function getQuantity(title) {
