@@ -39,3 +39,10 @@ describe("catalogueService", () => {
     });
   });
 
+  describe('catalogueService.checkQuantity', () => {
+    test('returns true if there are at least as many books in stock as the given quantity', () => {
+      expect(catalogueService.checkQuantity("By Night In Chile", 4)).toBe(true);
+      expect(catalogueService.checkQuantity("By Night In Chile", 100)).toBe(false);
+    });
+  });
+
