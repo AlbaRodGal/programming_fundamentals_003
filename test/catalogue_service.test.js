@@ -32,3 +32,10 @@ describe("catalogueService", () => {
       expect(catalogueService.getQuantity("A Place of Greater Safety")).toBe(11);
     });
   });
+
+  describe('catalogueService.getBooksByAuthor',() =>{
+    test('returns a list of books written by the given author', ()=> {
+      expect(catalogueService.getBooksByAuthor('Robert Bolaño')).toEqual([{ title: "2666", author: "Robert Bolaño", quantity: 17 }, { title: "By Night In Chile", author: "Robert Bolaño", quantity: 8}]);
+    });
+  });
+

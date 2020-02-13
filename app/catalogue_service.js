@@ -78,7 +78,12 @@ function getQuantity(title) {
 }
 
 function getBooksByAuthor(author) {
-  // Your code here
+  listOfBooks = [];
+  for (let i = 0; i < catalogue.length; i++){
+    if(catalogue[i].author === author){
+      listOfBooks.push(catalogue[i])
+    }
+  } return listOfBooks
 }
 
 function checkQuantity(title, quantity) {
